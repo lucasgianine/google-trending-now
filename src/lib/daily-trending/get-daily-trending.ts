@@ -30,6 +30,7 @@ export function getDailyTrending(
       for (let i = 0; i < params.amount; i++) {
         data = json['daily_searches'][i]
         await createTrendingNews({ data, trending })
+        console.log(`Foi criado ${i + 1} trending news (diário) de ${params.amount}`)
       }
 
       return

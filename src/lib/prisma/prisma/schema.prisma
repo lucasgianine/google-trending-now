@@ -11,9 +11,7 @@ datasource db {
 // Model
 model trending {
   id              String   @id @default(uuid()) @db.Uuid
-  title           String
-  url             String
   data            Json?
-  typeTrending    String
+  trending        Json?
   createdAt       DateTime @default(now())
 }

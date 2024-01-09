@@ -30,6 +30,7 @@ export function getRealtimeTrending(
       for (let i = 0; i < params.amount; i++) {
         data = json['realtime_searches'][i]
         await createTrendingNews({ data, trending })
+        console.log(`Foi criado ${i + 1} trending news (realtime) de ${params.amount}`)
       }
 
       return
