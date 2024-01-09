@@ -9,6 +9,11 @@ Nome | Descrição | Função
 [Prisma](https://www.prisma.io/) | OCR | Database Querys
 [Google Trends](https://serpapi.com/google-trends-api) | API | Trendings Topics
 
+## Antes de começar
+1. Crie na pasta raíz uma variável de ambiente (`.env`)
+2. `SERPAPI_API_KEY=sua_chave_serpapi`
+3. Rode os comandos abaixo
+
 ## Comandos
 Comando | Descrição
 --- | ---
