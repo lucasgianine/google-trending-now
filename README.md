@@ -1,4 +1,4 @@
-# 📰 Google Trends: Trending Now
+# 🔍 Google Trends: Trending Now
 O objetivo desse projeto é trazer uma aplicação que salva no seu banco de dados as noticias mais relevantes disponibilizadas pela API Google Trends.
 ## Tecnologia
 Nome | Descrição | Função
@@ -6,7 +6,7 @@ Nome | Descrição | Função
 [TypeScript](https://www.typescriptlang.org/) | Linguagem | Backend
 [Node.js](https://nodejs.org/en) | Biblioteca | Backend
 [PostgreSQL](https://www.postgresql.org/) | Linguagem SQL | Database
-[Prisma](https://www.prisma.io/) | OCR | Database Querys
+[Prisma](https://www.prisma.io/) | ORM | Database Querys
 [Google Trends](https://serpapi.com/google-trends-api) | API | Trendings Topics
 
 ## Antes de começar
@@ -41,6 +41,9 @@ Parâmetros | Obrigatoriedade | Descrição
 `amount` | Obrigatório | Passa a quantidade de noticias que deseja obter (min: `1`, max: `20`)
 `geo` | Opcional | A localização geográfica de onde quer pegar as notícias (`US` como padrão)
 `hl` | Opcional | A linguagem que será retornada as notícias (e.g. `pt`)
+
+### `http://localhost:3000/trends`
+Recebe todas as trends diárias que contenham links iguais.
 
 ## Saiba mais em: https://serpapi.com/google-trends-trending-now
 
