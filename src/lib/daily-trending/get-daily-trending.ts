@@ -29,5 +29,7 @@ export function getDailyTrending(
         currentDailyNews = json['trending_searches'][i]
         await createTrendingNews(currentDailyNews)
       }
+
+      return
     })
 }

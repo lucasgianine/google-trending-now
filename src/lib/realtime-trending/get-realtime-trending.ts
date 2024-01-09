@@ -29,5 +29,7 @@ export function getRealtimeTrending(
         currentRealtimeNews = json['trending_searches'][i]
         await createTrendingNews(currentRealtimeNews)
       }
+
+      return
     })
 }

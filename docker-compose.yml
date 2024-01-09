@@ -14,7 +14,7 @@ services:
       - google-trending-now-network
 
 networks:
-  ngoogle-trending-now-network:
+  google-trending-now-network:
 
 volumes:
   google-trending-now-volume:
