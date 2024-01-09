@@ -12,7 +12,9 @@ Nome | Descrição | Função
 ## Antes de começar
 1. Crie na pasta raíz uma variável de ambiente (`.env`)
 2. `SERPAPI_API_KEY=sua_chave_serpapi`
-3. Rode os comandos abaixo
+3. Crie na pasta do Prisma uma variável de ambiente (`.env`)
+4. `DATABASE_URL='postgresql://username:password@localhost:port/postgres'`
+5. Rode os comandos abaixo
 
 ## Comandos
 Comando | Descrição

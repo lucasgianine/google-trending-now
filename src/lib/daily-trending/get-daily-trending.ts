@@ -29,7 +29,7 @@ export function getDailyTrending(
       try {
         data = json['daily_searches'][0]
         await createTrendingNews({ data, trending })
-        console.log('A trend diária foi criada!')
+        console.log(`A trend diária (${params.date}) foi criada!`)
       } catch (error) {
         console.log(error)
       } finally {
