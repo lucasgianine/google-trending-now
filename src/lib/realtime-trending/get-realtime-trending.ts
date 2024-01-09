@@ -27,12 +27,16 @@ export function getRealtimeTrending(
       const trending = { cat: params.cat, geo: params.geo, hl: params.hl, trendingType: 'realtime' }
       let data: object
 
-      for (let i = 0; i < params.amount; i++) {
-        data = json['realtime_searches'][i]
-        await createTrendingNews({ data, trending })
-        console.log(`Foi criado ${i + 1} trending news (realtime) de ${params.amount}`)
+      try {
+        for (let i = 0; i < params.amount; i++) {
+          data = json['realtime_searches'][i]
+          await createTrendingNews({ data, trending })
+          console.log(`Foi criado ${i + 1} trending news (realtime) de ${params.amount}`)
+        }
+      } catch (error) {
+        console.log(error)
+      } finally {
+        return
       }
-
-      return
     })
 }

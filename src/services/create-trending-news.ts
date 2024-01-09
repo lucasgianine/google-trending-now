@@ -8,13 +8,14 @@ export type CreateTrendingNewsParams = {
 
 const schema = yup.object().shape({
     data: yup.object().shape({
-      id: yup.string().required(),
-      title: yup.string().required(),
+      id: yup.string().optional(),
+      title: yup.string().optional(),
       link: yup.string().optional(),
       queries: yup.array().optional(),
       explore_links: yup.array().optional(),
       sparkline_chart_link: yup.string().optional(),
-      articles: yup.array().optional()
+      articles: yup.array().optional(),
+      searches: yup.array().optional()
     }),
     trending: yup.object().shape({
       date: yup.string().optional(),
