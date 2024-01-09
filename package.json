@@ -7,8 +7,8 @@
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "ts-node api/app.ts",
-    "daily": "dotenv -e .env.development.local -- ts-node src/daily-trending/index.ts",
-    "start": "dotenv -e .env.development.local -- ts-node src/realtime-trending/index.ts"
+    "daily": "ts-node src/lib/daily-trending/index.ts",
+    "realtime": "ts-node src/lib/realtime-trending/index.ts"
   },
   "author": "lucasgianine",
   "license": "ISC",
