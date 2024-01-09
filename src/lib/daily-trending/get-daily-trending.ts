@@ -24,10 +24,12 @@ export function getDailyTrending(
     hl: params.hl || 'pt'
   })
     .then(async (json) => {
-      let currentDailyNews: any
+      const trending = { date: params.date, geo: params.geo, hl: params.hl, trendingType: 'daily' }
+      let data: object
+
       for (let i = 0; i < params.amount; i++) {
-        currentDailyNews = json['trending_searches'][i]
-        await createTrendingNews(currentDailyNews)
+        data = json['daily_searches'][i]
+        await createTrendingNews({ data, trending })
       }
 
       return

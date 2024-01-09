@@ -24,10 +24,12 @@ export function getRealtimeTrending(
     hl: params.hl || 'pt'
   })
     .then(async (json) => {
-      let currentRealtimeNews: any
+      const trending = { cat: params.cat, geo: params.geo, hl: params.hl, trendingType: 'realtime' }
+      let data: object
+
       for (let i = 0; i < params.amount; i++) {
-        currentRealtimeNews = json['trending_searches'][i]
-        await createTrendingNews(currentRealtimeNews)
+        data = json['realtime_searches'][i]
+        await createTrendingNews({ data, trending })
       }
 
       return
