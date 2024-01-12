@@ -2,7 +2,7 @@ import 'dotenv/config'
 import { getJson } from 'serpapi'
 import createTrendingNews from '../../services/create-trending-news'
 
-const api_key = '61102a182d075137f5d198c06257e77fadbd833e0460d644f64494d1b1a8a201'
+const api_key = process.env.SERPAPI_API_KEY
 
 type GetMonthTrendingParams = {
   month: string,

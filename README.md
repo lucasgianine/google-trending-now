@@ -22,6 +22,7 @@ Comando | Descrição
 `docker compose up` | Executa o PostgreSQL usando Docker
 `npm install` | Instala todas as dependências do package-lock.json
 `npm run daily` | Executa o endpoind para criar notícias do trend diário no seu banco de dados
+`npm run month` | Executa o endpoind para criar notícias do trend mensal (daily) no seu banco de dados
 `npm run realtime` | Executa o endpoind para criar notícias do trend realtime no seu banco de dados
 
 # Requisições parametrizáveis
