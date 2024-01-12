@@ -2,7 +2,7 @@ import express from 'express'
 import { getDailyTrending } from '../src/lib/daily-trending/get-daily-trending'
 import { getRealtimeTrending } from '../src/lib/realtime-trending/get-realtime-trending'
 import { getMonthTrending } from '../src/lib/daily-trending/get-month-trending'
-import getSameTrends from '../src/services/get-same-trends'
+import getTrendsByQueries from '../src/services/get-trends-by-queries'
 
 const app = express()
 const port = 3000
@@ -40,7 +40,9 @@ app.post('/realtime', (req, res) => {
 })
 
 app.get('/trends', (req, res) => {
-  try { getSameTrends() }
+  const query = req.query.query as string // required
+
+  try { getTrendsByQueries(query) }
   catch (error) { console.log(error) }
 })
 
