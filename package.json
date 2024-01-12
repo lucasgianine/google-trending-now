@@ -7,8 +7,9 @@
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "ts-node api/app.ts",
-    "daily": "ts-node src/lib/daily-trending/index.ts",
-    "realtime": "ts-node src/lib/realtime-trending/index.ts"
+    "daily": "ts-node src/lib/daily-trending/daily.ts",
+    "realtime": "ts-node src/lib/realtime-trending/index.ts",
+    "month": "ts-node src/lib/daily-trending/month.ts"
   },
   "author": "lucasgianine",
   "license": "ISC",
