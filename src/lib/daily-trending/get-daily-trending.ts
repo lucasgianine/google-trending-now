@@ -32,8 +32,6 @@ export function getDailyTrending(
         console.log(`A trend diária (${params.date}) foi criada!`)
       } catch (error) {
         console.log(error)
-      } finally {
-        return
       }
     })
 }
