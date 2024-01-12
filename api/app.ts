@@ -1,6 +1,7 @@
 import express from 'express'
 import { getDailyTrending } from '../src/lib/daily-trending/get-daily-trending'
 import { getRealtimeTrending } from '../src/lib/realtime-trending/get-realtime-trending'
+import { getMonthTrending } from '../src/lib/daily-trending/get-month-trending'
 import getSameTrends from '../src/services/get-same-trends'
 
 const app = express()
@@ -13,6 +14,17 @@ app.post('/daily', (req, res) => {
 
   try {
     getDailyTrending({ date, geo, hl })
+  } catch (error) { console.log(error) }
+})
+
+app.post('/month', (req, res) => {
+  const month = req.body.month // required
+  const year = req.body.year // required
+  const geo = req.body.geo // optional
+  const hl = req.body.hl // optional
+
+  try {
+    getMonthTrending({ month, year, geo, hl })
   } catch (error) { console.log(error) }
 })
 
