@@ -30,7 +30,6 @@ Comando | Descrição
 Parâmetros | Obrigatoriedade | Descrição
 --- | --- | ---
 `date` | Obrigatório | Passa a data do dia que deseja pegar as noticias relevantes (e.g. `20240108`)
-`amount` | Obrigatório | Passa a quantidade de noticias que deseja obter (min: `1`, max: `20`)
 `geo` | Opcional | A localização geográfica de onde quer pegar as notícias (`US` como padrão)
 `hl` | Opcional | A linguagem que será retornada as notícias (e.g. `pt`)
 
@@ -39,6 +38,14 @@ Parâmetros | Obrigatoriedade | Descrição
 --- | --- | ---
 `cat` | Obrigatório | Passa a categoria das notícias que deseja obter (`b` - Business, `e` - Entertainment, `m` - Health, `t` - Sci/Tech, `s` - Sport, `h` - Top Stories)
 `amount` | Obrigatório | Passa a quantidade de noticias que deseja obter (min: `1`, max: `20`)
+`geo` | Opcional | A localização geográfica de onde quer pegar as notícias (`US` como padrão)
+`hl` | Opcional | A linguagem que será retornada as notícias (e.g. `pt`)
+
+### `http://localhost:3000/month`
+Parâmetros | Obrigatoriedade | Descrição
+--- | --- | ---
+`month` | Obrigatório | Passa o mês que deseja obter as notícias (e.g. `'11'`)
+`year` | Obrigatório | Passa o ano que deseja obter as notícias (e.g. `'2023'`)
 `geo` | Opcional | A localização geográfica de onde quer pegar as notícias (`US` como padrão)
 `hl` | Opcional | A linguagem que será retornada as notícias (e.g. `pt`)
 
